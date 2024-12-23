@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+    --primary-bright-yellow: hsl(71, 73%, 54%);
+    --primary-cyan: hsl(179, 62%, 43%);
+
+    --neutral-light-gray: hsl(204, 43%, 93%);
+    --neutral-grayish-blue: hsl(216, 53%, 84%);
+}
+
+*,
+html,
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    position: relative;
+    font-family: 'Karla', sans-serif;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    background-color: var(--neutral-grayish-blue);
+    padding: 70px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: grid;
+    width: 100%;
+}
+
+.community {
+    background-color: white;
+    padding: 30px 25px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.community h2 {
+    font-size: 1.2rem;
+    color: var(--primary-cyan);
+}
+
+.community h4 {
+    color: var(--primary-bright-yellow);
+    font-size: .9rem;
+    margin: 25px 0;
+}
+
+.community p {
+    font-size: .85rem;
+    color: var(--neutral-grayish-blue);
+    line-height: 1.5rem;
+}
+
+.subscribe {
+    padding: 30px 25px;
+    background-color: rgb(31, 156, 179);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.subscribe h4 {
+    color: white;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.subscribe .money {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.subscribe .money p {
+    color: white;
+    font-weight: 300;
+}
+
+.subscribe .money span {
+    color: white;
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+.subscribe h6 {
+    color: white;
+    font-size: .9rem;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.subscribe button {
+    width: 100%;
+    padding: 13px;
+    background-color: var(--primary-bright-yellow);
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    max-width: 300px;
+}
+
+.about {
+    padding: 30px 25px;
+    background-color: var(--primary-cyan);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.about h3 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.about p {
+    color: var(--neutral-light-gray);
+}
+
+@media only screen and (min-width:700px) {
+    main {
+        min-height: 100vh;
+        padding: 150px;
+    }
+
+    .container {
+        max-width: 700px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .community {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .subscribe {
+        border-bottom-left-radius: 5px;
+    }
+
+    .about {
+        border-bottom-left-radius: 0;
+    }
+
+}
